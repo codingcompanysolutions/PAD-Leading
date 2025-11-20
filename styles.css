@@ -1,0 +1,378 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #1f6feb; /* Azul original */
+  --accent-hover: #1a5bbd;
+  --secondary: #6e44ff; /* Un tono morado sutil para branding de Coding Company */
+  --muted: #94a3b8;
+  --white: #f8fafc;
+  --maxw: 1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #071028 0%, #071726 100%);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* HEADER */
+.site-header {
+  background: rgba(7, 16, 40, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo {
+  background: var(--white);
+  color: #0b1220;
+  font-weight: 800;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: monospace; /* Estilo más 'coding' */
+  font-size: 16px;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.brand-text .tag {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--white);
+}
+
+.nav .cta {
+  background: var(--accent);
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 60px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(31, 111, 235, 0.15);
+  color: #6cb6ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  font-size: 18px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  border-radius: 16px;
+}
+.hero-card h4 {
+  margin-top: 0;
+  color: var(--accent);
+}
+.hero-card p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.btn {
+  background: var(--accent);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 10px;
+}
+.btn.ghost:hover {
+  border-color: var(--white);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 0;
+}
+.alt {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+.section-header h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.highlight {
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.card h4 {
+  margin-top: 0;
+  color: var(--white);
+}
+
+/* MISION VISION SPLIT */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.text-block {
+  background: linear-gradient(135deg, var(--card), transparent);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+.text-block h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+/* VALUES GRID */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+.value-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.value-item .num {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.value-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--white);
+}
+
+/* STRATEGY BOX */
+.strategy-box {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 111, 235, 0.2);
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* FORM & FOOTER */
+.contact-form {
+  display: grid;
+  gap: 12px;
+  max-width: 540px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  width: 100%;
+  font-family: inherit;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+.tiny {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 40px;
+}
+.muted-text {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid,
+  .split-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  /* --- Estilos para Redes Sociales (Actualizado) --- */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Más espacio entre ellos porque son más grandes */
+    margin-bottom: 30px;
+  }
+
+  .social-links a {
+    text-decoration: none;
+    /* Quitamos el color gris para que cada uno tenga el suyo propio */
+  }
+
+  /* Configuración general de los Iconos */
+  .social-links i {
+    font-size: 48px; /* AQUI CAMBIAS EL TAMAÑO (Antes 28px) */
+    transition: transform 0.3s ease;
+  }
+
+  /* Efecto de "saltito" al pasar el mouse */
+  .social-links a:hover i {
+    transform: translateY(-5px);
+  }
+
+  /* --- COLOR INSTAGRAM (Degradado Rosa) --- */
+  .fa-instagram {
+    /* El degradado oficial de Instagram */
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+
+    /* Truco para pintar el texto con el fondo */
+    -webkit-background-clip: text;
+    background-clip: text; /* Evita la advertencia amarilla */
+    -webkit-text-fill-color: transparent;
+
+    display: inline-block; /* Necesario para que el degradado se vea bien en todos los navegadores */
+  }
+
+  /* --- COLOR FACEBOOK (Azul Oficial) --- */
+  .fa-facebook {
+    color: #1877f2;
+  }
+}
